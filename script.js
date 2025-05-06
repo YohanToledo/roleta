@@ -38,30 +38,29 @@ function desenharRoleta() {
     ctx.fillStyle = `hsl(${(i * 360) / setores.length}, 80%, 70%)`;
     ctx.fill();
   
-    // === Número rotacionado para "fora" ===
     const anguloTexto = inicio + anguloPorSetor / 2;
-    const x = raio + Math.cos(anguloTexto) * (raio - 30);
-    const y = raio + Math.sin(anguloTexto) * (raio - 30);
+    const x = raio + Math.cos(anguloTexto) * (raio - 15);
+    const y = raio + Math.sin(anguloTexto) * (raio - 15);
   
-    ctx.save(); // Salva o contexto antes de rotacionar
+    ctx.save();
     ctx.translate(x, y);
-    ctx.rotate(anguloTexto); // Gira no ângulo do setor
+    ctx.rotate(anguloTexto);
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillStyle = "#333";
-    ctx.font = "bold 16px Poppins";
+    ctx.font = "bold 14px Poppins";
     ctx.fillText(num, 0, 0);
-    ctx.restore(); // Restaura o contexto para o próximo
+    ctx.restore();
   });
 
-  // Ponteiro
+
   ctx.beginPath();
   ctx.moveTo(raio, 0);
   ctx.lineTo(raio - 10, -20);
   ctx.lineTo(raio + 10, -20);
   ctx.closePath();
   ctx.fillStyle = "#444";
-  ctx.translate(0, 0); // reset
+  ctx.translate(0, 0);
 }
 
 function girarRoleta() {
