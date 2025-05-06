@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roleta do Amor ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Roleta do Amor ❤️</h1>
+
+    <label for="quantidade">Quantidade de opções:</label>
+    <input id="quantidade" type="number" min="2" max="100" value="10" />
+
+    <button id="gerarBtn">🎨 Gerar Roleta</button>
+
+    <div class="roleta-wrapper">
+      <div class="seta"></div>
+      <canvas id="roleta" width="400" height="400"></canvas>
+    </div>
+
+    <button id="girarBtn">🎡 Girar</button>
+
+    <div id="resultado"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
